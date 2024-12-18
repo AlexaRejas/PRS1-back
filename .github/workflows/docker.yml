@@ -2,7 +2,7 @@ name: SonarCloud
 on:
   push:
     branches:
-      - develop
+     - develop
 jobs:
   build:
     name: Build, analyze, and Dockerize
