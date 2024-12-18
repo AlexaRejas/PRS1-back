@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: prs1-back
+  jdbc:
+    url: ${DATABASE_URL}
+    #jdbc:postgresql://ep-lucky-art-a52zm4bb.us-east-2.aws.neon.tech:5432/neondb?sslmode=require
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+    show-sql: true
+
+
+# URL de conexi�n a Neon con SSL habilitado
+#spring.datasource.url=jdbc:postgresql://ep-lucky-art-a52zm4bb.us-east-2.aws.neon.tech:5432/neondb?sslmode=require
+#spring.datasource.username=neondb_owner
+#spring.datasource.password=M5mgPyJf9FtD
+#spring.datasource.driver-class-name=org.postgresql.Driver
+
+# Configuraci�n de JPA e Hibernate
+#spring.jpa.hibernate.ddl-auto=update
+#spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+#spring.jpa.show-sql=true
+#spring.jpa.properties.hibernate.format_sql=true
