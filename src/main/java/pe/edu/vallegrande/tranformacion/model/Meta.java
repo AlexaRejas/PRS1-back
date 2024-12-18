@@ -9,6 +9,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
+
 @Entity
 @Data
 @Table(name = "Meta")
@@ -26,7 +27,7 @@ public class Meta {
 
         private String objective;
 
-        private String time; // Cambiado de java.sql.Date a String
+        private String time;
 
         private Character status; // 'A' o 'I'
 
