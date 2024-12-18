@@ -1,0 +1,36 @@
+
+#kubectl apply -f deployment.yml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prs1-back
+  namespace: alexa-rejas-namespace
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prs1-back
+  template:
+    metadata:
+      labels:
+        app: prs1-back
+    spec:
+      containers:
+      - name: prs1-back
+        image: rejas281/prs1-back:latest  # Reemplaza con tu imagen Docker
+        env:
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: prs1-back  # Nombre del Secret, corregido
+              key: DATABASE_URL
+        - name: DATABASE_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: prs1-back  # Nombre del Secret, corregido
+              key: DATABASE_USERNAME
+        - name: DATABASE_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: prs1-back  # Nombre del Secret, corregido
+              key: DATABASE_PASSWORD
